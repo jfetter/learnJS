@@ -7,11 +7,9 @@ return vowels.indexOf(char.toLowerCase())>-1;
 var hasAtLeastOneVowel =function(str){
     var strArray = str.split("");
     var result = false;
-    strArray.forEach(function(item){
-    if (!result){result = isVowel(item);
-    }
+    return strArray.some(function(item){
+    return isVowel(item);
     });
-return result;
 };
 
 
