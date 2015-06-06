@@ -5,13 +5,14 @@ return vowels.indexOf(char.toLowerCase())>-1;
 }
 
 var hasAtLeastOneVowel =function(str){
-    for (var i=0; i<str.length; i++) {
-        if (isVowel(str[i])) { 
-        return true;
-        } 
-   }
-            return false;
-}
+    var strArray = str.split("");
+    var result = false;
+    strArray.forEach(function(item){
+    if (!result){result = isVowel(item);
+    }
+    });
+return result;
+};
 
 
 console.log(hasAtLeastOneVowel("test")); //true
